@@ -8,6 +8,20 @@ You've been just hired and an engineer who is no longer around has left a Rust p
 
 Copilot to the rescue!
 
+## API
+
+The API is a Rust application that runs on `127.0.0.1` using port `8080``. It provides a JSON response with the following format:
+
+```json
+    {"body": [[x1, y1], [x2, y2], ...], "food": [xf, yf], "game_over": true/false}
+```
+
+Here are a couple of example responses from the API:
+
+```json
+    {"body": [[0, 0], [0, 1], [0, 2]], "food": [1, 2], "game_over": false}
+    {"body": [[0, 0], [0, 1], [0, 2]], "food": [1, 2], "game_over": true}
+```
 
 ## TL;DR ?
 

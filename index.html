@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Snake Game</title>
+    <style>
+        body {
+            background-color: #000000;
+        }
+
+        canvas {
+            border: 1px solid white;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="background-color: azure;">Snake Game</h1>
+    <div id="score">
+        <h2 style="background-color: grey">
+            <h2>Score: 0</h2>
+    </div>
+    <canvas id="canvas" width="400" height="200" border=""></canvas>
+    <script>
+        let lastDirection = 'right';
+        let score = 0;
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        let snake = [];
+        let food = [];
+        snake.push([10, 10]);
+        drawSnake();
+        function drawSnake() {
+            // Clear the canvas and redraw the snake using the snake array of coordinates
+            // with a size of 10px by 10px that uses the color white 
+        }
+
+        function drawFood() {
+            // Draw the food using the food array of coordinates with a size of 10px by 10px
+            // and use the color red
+        }
+
+        function moveSnake(direction) {
+            // Set the lastDirection variable to the direction parameter
+            // and update the score element with the new score using the score variable
+        }
+
+        // Add an event listener to the document object that listens for the keydown event
+        // use the up, down, left, and right keys to call the moveSnake function with the
+        // appropriate direction. Use the N key to call the resetGame function
+        
+
+        async function resetGame() {
+            // Reset the game by sending a POST request to the
+            // https://127.0.0.1:8080/new endpoint. Update the global snake variable to be an array with a single
+            // coordinate of [5, 5]. Clear the canvas and call the drawSnake function
+        }
+
+        async function sendMoveRequest() {
+            // Use the lastDirection variable to send a POST request to the endpoint at http://127.0.0.1:8080/move/{lastDirection}
+            // and update the snake and food variables with the response data. If the game is over, clear the interval and
+            // alert the user that the game is over. If the food coordinates are not the same as the food variable, add 5 points
+            // to the score variable. Clear the canvas and call the drawSnake and drawFood functions
+
+
+            // check if data.food is not the same as the `food` variable so that we can
+            // add 5 points to the score using a document.querySelector('#score h2') element
+            
+            // update the snake and food global variables with the response data
+
+            // make sure the screen is clear and redraw the snake and food
+
+        }
+
+        // Create an interval so that every 500 milliseconds, the sendMoveRequest function is called so that the snake moves
+        // in the direction of the lastDirection variable
+        
+    </script>
+</body>
+
+</html>
